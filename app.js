@@ -26,5 +26,10 @@ const buscarPelicula = async () => {
         resultados.textContent = 'Ha ocurrido un error';
     }
 };
+input.addEventListener('keydown', (evento) => {
+    if (evento.key === 'Enter') {
+        buscarPelicula();
+    }
+});
 
 boton.addEventListener('click', buscarPelicula);
